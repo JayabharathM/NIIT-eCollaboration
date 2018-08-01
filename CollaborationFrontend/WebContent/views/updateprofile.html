@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head> 
+  
+<style>
+  body{
+  background-color: #808080;
+  }
+</style>
+
+<body>
+<div="container" style="background-image: url('/resources/image1.jpg');">
+<center>
+<form class="inline">
+
+<div class="form-group">
+<label class="sr-only" for="username">Username:</label>
+ Enter username<input type="text"  class="form-control" id="username"  name="username" ng-model="user.username" style="width:500px; height:35px;">
+</div> 
+
+<div class="form-group">
+<label class="sr-only" for="username">Password:</label>
+Enter password <input type="password" class="form-control" id="pwd"  name="pwd" ng-model="user.password" style="width:500px; height:35px;">
+</div>
+
+<div class="form-group">
+<label class="sr-only" for="firstname">Firstname:</label>
+Enter firstname<input type="text" class="form-control" id="firstname" name="firstname" ng-model="user.firstname" style="width:500px; height:35px;">
+</div>
+
+<div class="form-group">
+<label class="sr-only" for="lastname">lastname:</label>
+Enter lastname <input type="text" class="form-control" id="lastname" name="lastname" ng-model="user.lastname" style="width:500px; height:35px;">
+</div>
+
+<div class="form-group">
+<label class="sr-only" for="email">Email:</label>
+Enter Email <input type="email" class="form-control" id="email" name="email" ng-model="user.email" style="width:500px; height:35px;">
+</div>
+
+<div class="form-group">
+<label class="sr-only" for="phonenumber">Phonenumber:</label>
+Enter phonenumber <input type="text" class="form-control" id="phonenumber" name="phonenumber" ng-model="user.phonenumber" style="width:500px; height:35px;">
+</div>
+
+<div class="form-group">
+Select Role<br>
+&nbsp&nbsp<input type="radio" value="STUDENT" ng-model="user.role">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role">Alumini<br>
+&nbsp&nbsp&nbsp&nbsp<input type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br>
+</div>
+
+<div>
+&nbsp&nbsp&nbsp<button type="button"  class="btn btn-info" ng-click="updateUser()"> Submit </button>
+</div>
+
+</form>
+</center>
+</div>
+</body>
+</html>
+
+<!-- <form>
+
+Enter username <input type="text"  ng-model="user.username"><Br>
+Enter password <input type="password" ng-model="user.password"><br>
+Enter firstname<input type="text" ng-model="user.firstname"><br>
+Enter lastname <input type="text" ng-model="user.lastname"><br>
+Enter Email <input type="email" ng-model="user.email"><br>
+Enter phonenumber <input type="text" ng-model="user.phonenumber"><br>
+Select Role<br>
+<input type="radio" value="STUDENT" ng-model="user.role">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role">Alumini<br>
+<input type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br>
+
+<input type="submit" ng-click="updateUser()">
+
+</form> -->

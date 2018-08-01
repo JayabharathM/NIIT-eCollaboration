@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+  body{
+  background-color:#E3FBE9;
+  }
+  </style>
+  
+ <body >
+<div ng-show="currentUser.role=='ADMIN'">
+<span style="color:#36C331">List of Blog Posts waiting for approval</span>
+<table class="table table-striped">
+<thead>
+<tr><th style="color:#008000">Title</th><th style="color:#008000">Author</th><th style="color:#008000">Posted On</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#/approveblogpost/{{blog.id}}"> <span style="color:#36C331">{{blog.blogTitle}}</span></a></td><td style="color:#36C331">{{blog.postedBy.username}}</td><td style="color:#36C331"> {{blog.postedOn | date:'yyyy/MM/dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<br>
+<div >
+
+<span style="color:#36C331">List Of Blogs which are Approved </span><br>
+<table class="table table-striped">
+<thead>
+<tr><th style="color:#008000">Title</th> <th style="color:#008000">Author</th> <th style="color:#008000">Posted On</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#/getblogpostbyid/{{blog.id}}"> <span style="color:#36C331">{{blog.blogTitle}}</span></a></td><td> <span style="color:#36C331">{{blog.postedBy.username}}</span></td><td><span style="color:#36C331">{{blog.postedOn | date:'yyyy/MM/dd'}}</span></td>
+</tr>
+</tbody>
+</table>
+<img src="resources/leaf.jpg" alt="" style="width:100%; height:70%;">
+</div>
+</body>
+</html>

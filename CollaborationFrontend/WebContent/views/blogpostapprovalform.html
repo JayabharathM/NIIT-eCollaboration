@@ -1,0 +1,41 @@
+<div class="row">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<div>{{blogPost.blogTitle}}</div>
+<span><strong>Created By:</strong>{{blogPost.postedBy.username}}</span>
+<span><strong>on:</strong>{{blogPost.postedOn | date:'medium'}}</span>
+</div>
+<div class="panel-body">
+{{blogPost.description}}
+</div>
+</div>
+</div>
+</div>
+
+<form>
+<input type="radio" ng-model="blogPost.approved" value="true">Approve
+<input type="radio" ng-model="blogPost.approved" value="false">Reject
+<input type="submit" ng-click="updateBlogPost()">
+</form>
+
+<!-- <script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="controller/usercontroller.js"></script>
+	<script type="text/javascript" src="service/userservice.js"></script>
+	<script type="text/javascript" src="controller/jobcontroller.js"></script>
+	<script type="text/javascript" src="service/jobservice.js"></script>
+	<script type="text/javascript" src="controller/blogpostcontroller.js"></script>
+	<script type="text/javascript" src="service/blogpostservice.js"></script>
+	<script type="text/javascript" src="controller/blogpostdetailcontroller.js"></script>
+	<link href="css/sample.css"/>
+ -->
+
+
+

@@ -1,0 +1,29 @@
+<style>
+body{
+background-color:#CD7F32;
+}
+</style>
+<center>
+<body>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>From</th>
+<th>Profile pic</th>
+<th>Accept</th>
+<th>Deny</th>
+</tr>
+</thead>
+
+<tbody>
+<tr ng-repeat="pendingRequest in pendingrequests">
+<td><a href="#/getUserDetails/{{pendingRequest.fromId}}">{{pendingRequest.fromId}}</a></td>
+<td><img src="http://localhost:8090/CollaborationBackend/getimage/{{pendingRequest.fromId}}"height="50px" width="50px"></td>
+<!-- Two parameters [friend object with status P, status to be updated] -->
+<td><a href="" ng-click="updatePendingRequest(pendingRequest,'A')" class="btn btn-info">Accept</a></td>
+<td><a href="" ng-click="updatePendingRequest(pendingRequest,'D')" class="btn btn-warning">Deny</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</body>

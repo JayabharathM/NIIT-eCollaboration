@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+<style>
+body{
+  background-color: #F0FFF0;
+  }
+</style>
+  
+<body>   
+<div class="container">
+<form class="form-inline">
+<div class="form-group">
+ Search:<input type="text" ng-model="searchText"> 
+</div>
+
+<div class="form-group">
+ Search By Title:<input type="text" ng-model="searchText.jobTitle">
+</div>
+
+<div class="form-group">
+Search By Skills:<input type="text" ng-model="searchText.skillRequired"><br><br><br>
+</div>
+</form>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Title</th><th>Posted On</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="job in jobs | filter:searchText">
+<td><a ng-click="getJobDetails(job.job)">{{job.jobTitle}}</a></td>
+<td>{{job.postedOn  | date : 'yyyy-MM-dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div>"WebContent/controller/jobcontroller.js"
+
+<div ng-show="showJobDetails">
+<b>Job Title</b> {{job.jobTitle}} <br>
+<b>Job Description</b> {{job.jobDescription}} <br>
+<b>Skills Required</b> {{job.skillRequired}} <br>
+<b>Years Of Experience</b> {{job.yrsOfExp}} <br>
+<b>Salary</b> {{job.salary}} <br>
+<b>Location</b> {{job.location}} <br>
+<b>Company Name</b> {{job.companyname}} <br>
+<b>Posted On</b> {{job.postedOn | date:'yyyy:MM:dd'}} <br>
+</div>
+
+</body>
+</html> -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <style>
+      body{
+            
+            background-image: url("resources/career.jpg");
+            
+          }
+  </style>
+
+<br><br>
+<body>
+<div>
+
+<span style="color:#36C331">Search : </span>&nbsp <input ng-model="search">
+<span style="color:#36C331">Search By Title : </span>&nbsp <input ng-model="searchText.jobTitle">
+<span style="color:#36C331">Search By Skills: </span>&nbsp <input ng-model="searchText.skillRequired">
+<br><br><br>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th style="color:#00CC00;">Title</th><th style="color:#00CC00;">Posted On</th>
+</tr>
+</thead>
+<tbody> 
+<tr ng-repeat="job in jobs  | filter:search">
+<td><a href="" ng-click="getJobDetails(job.job)"><span style="color:#36C331">{{job.jobTitle}} </span></a></td>
+<td><span style="color:#36C331">{{job.postedOn | date : 'yyyy-MM-dd'}}</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div ng-show="showJobDetails">
+<b style="color:#008000">Job Title : </b><span style="color:#36C331">{{job.jobTitle}}</span> <br>
+<b style="color:#008000">Job Description : </b><span style="color:#36C331">{{job.jobDescription}} </span><br>
+<b style="color:#008000">Skills Required : </b><span style="color:#36C331">{{job.skillRequired}} </span><br>
+<b style="color:#008000">Years Of Experience : </b><span style="color:#36C331">{{job.yrsOfExp}} </span><br>
+<b style="color:#008000">Salary : </b><span style="color:#36C331">{{job.salary}}</span> <br>
+<b style="color:#008000">Location : </b><span style="color:#36C331">{{job.location}} </span><br>
+<b style="color:#008000">Company Name : </b><span style="color:#36C331">{{job.companyname}} </span><br>
+<b style="color:#008000">Posted On : </b><span style="color:#36C331">{{job.postedOn | date:'yyyy:MM:dd'}}</span> <br>
+
+
+</div>
+</body>
+</html>

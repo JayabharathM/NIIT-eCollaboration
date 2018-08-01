@@ -1,0 +1,90 @@
+<!-- <html>
+<head>
+
+</head>
+<style>
+/* body{ */
+/* background-color:  #E9E581; */
+/* } */
+</style>
+<body><br><br>
+<center>
+<table>
+    <thead>
+         <tr>
+           <th><font color="black" size="5px" >Username &nbsp &nbsp &nbsp &nbsp </font></th>
+           
+           <th  > </th>
+         </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="friend in friends">
+    <td ng-hide="friend.fromId==currentUser.username" ><font color="black" size="3px" margin="20px">{{friend.fromId}} </font></td>
+    <td ng-hide="friend.toId==currentUser.username"  ><font color="black" size="3px">{{friend.toId}} </font> </td>
+
+    <td><img src="http://localhost:8082/CollaborationBackend/getimage/{{friend.fromId}}" 
+                ng-hide="friend.fromId==currentUser.username" height="60px" width="60px"></td>
+              
+    <td><img src="http://localhost:8082/CollaborationBackend/getimage/{{friend.toId}}" 
+                ng-hide="friend.toId==currentUser.username" height="60px" width="60px" ></td>
+    </tr>
+    </tbody>
+</table>
+</center>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+body{
+background-color:#A2AB58;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+th{
+font-size:18px;
+}
+td{
+font-size:15px;
+} 
+tr:nth-child(even){background-color: #F5F3EE}
+</style>
+</head>
+
+<body>
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>Username</th>
+     
+   
+    </tr>
+    <tr ng-repeat="friend in friends">
+      <td ng-hide="friend.fromId==currentUser.username">{{friend.fromId}}</td>
+      <td ng-hide="friend.toId==currentUser.username">{{friend.toId}}</td>
+      <td><img src="http://localhost:8090/CollaborationBackend/getimage/{{friend.fromId}}" 
+                ng-hide="friend.fromId==currentUser.username" height="60px" width="60px"><img src="http://localhost:8090/CollaborationBackend/getimage/{{friend.toId}}" 
+                ng-hide="friend.toId==currentUser.username" height="60px" width="60px" ></td>
+      <td></td>
+   
+    </tr>
+   
+  </table>
+</div>
+
+</body>
+
+</html>
